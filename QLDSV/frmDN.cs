@@ -63,7 +63,7 @@ namespace QLDSV
             else
             {
 
-                
+                if (Program.KetNoi() == 0)
                     return;
                 String strLenh = "SELECT name  from sys.sysusers  where sid = SUSER_SID('" + Program.mlogin + "')";
                 Program.myReader = Program.ExecSqlDataReader(strLenh, Program.connstr);
