@@ -51,6 +51,7 @@ namespace QLDSV
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
+            ShowMdiChildren(typeof(frQLSV));
 
         }
         private void ShowMdiChildren(Type fType)
@@ -76,7 +77,6 @@ namespace QLDSV
 
         private void btnQLDSV_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ShowMdiChildren(typeof(frQLSV));
 
         }
     }

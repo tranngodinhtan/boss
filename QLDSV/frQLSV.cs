@@ -36,5 +36,15 @@ namespace QLDSV
         {
 
         }
+
+        private void tENTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tENLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
