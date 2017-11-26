@@ -56,17 +56,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectSql.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDN.Designer.cs">
       <DependentUpon>frmDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frQLL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frQLL.Designer.cs">
+      <DependentUpon>frQLL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frQLSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frQLSV.Designer.cs">
+      <DependentUpon>frQLSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frQLTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frQLTK.Designer.cs">
+      <DependentUpon>frQLTK.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,11 +93,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSVDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="QLDSVDataSet1.cs">
+      <DependentUpon>QLDSVDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDSVDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSVDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDN.resx">
       <DependentUpon>frmDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frQLL.resx">
+      <DependentUpon>frQLL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frQLSV.resx">
+      <DependentUpon>frQLSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frQLTK.resx">
+      <DependentUpon>frQLTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -111,6 +146,17 @@
     </None>
     <None Include="QLDSVDataSet.xss">
       <DependentUpon>QLDSVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSVDataSet1.xsc">
+      <DependentUpon>QLDSVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSVDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSVDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSVDataSet1.xss">
+      <DependentUpon>QLDSVDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

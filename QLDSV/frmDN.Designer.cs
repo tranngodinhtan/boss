@@ -92,6 +92,7 @@
             this.tbMK.Size = new System.Drawing.Size(251, 20);
             this.tbMK.TabIndex = 5;
             this.tbMK.Tag = "3";
+            this.tbMK.UseSystemPasswordChar = true;
             this.tbMK.TextChanged += new System.EventHandler(this.tbMK_TextChanged);
             // 
             // btnDN
@@ -138,8 +139,6 @@
             // 
             // cbbK
             // 
-            this.cbbK.DataSource = this.v_DS_PHANMANHBindingSource;
-            this.cbbK.DisplayMember = "TENKHOA";
             this.cbbK.FormattingEnabled = true;
             this.cbbK.Location = new System.Drawing.Point(286, 86);
             this.cbbK.Name = "cbbK";

@@ -13,33 +13,42 @@ namespace QLDSV
     {
         public static SqlConnection connect = null;
         public static SqlDataAdapter adapter = null;
-        public static SqlCommand command = null;
+        public static SqlCommand command = new SqlCommand();
+        public static string mhoten;
+        public static string mgroup;
+        public static string mlogin;
+        public static string khoa;
+        public static bool status;
+        public static string connectionstring; // biến tạm chứa connectionstring
         //public static User CurrentUsser;
-        public static void Connect(String ServerName, String DatabaseName, String username, String password)
+        public static bool Connect(String ServerName, String DatabaseName, String username, String password)
         {
+            status = true;
             String ConnectionSting = "Data Source =" + ServerName + "; Initial Catalog =" + DatabaseName + "; Integrated Security = False; User Id = " + username + "; Password = " + password + "; MultipleActiveResultSets = True";
             try
             {
                 connect = new SqlConnection(ConnectionSting);
                 connect.Open();
+                connectionstring = ConnectionSting;
             }
             catch (SqlException ex)
             {
+                status = false;
                 MessageBox.Show(ex.Message);
                 connect.Close();
 
             }
-
+            return status;
         }
-        public static DataTable GetServerName()
+        public static DataTable GetDataTable (String query)
         {
             DataTable table = new DataTable();
-            connect = new SqlConnection(@"Data Source=ACER-PC\SERVER1;Initial Catalog=QLDSV;Integrated Security=True");
-            connect.Open();
-            adapter = new SqlDataAdapter("select TENSERVER from dbo.V_DS_PHANMANH", connect);
+            adapter = new SqlDataAdapter(query,connect);
             adapter.Fill(table);
             return table;
         }
+
+      
     }
 
 }

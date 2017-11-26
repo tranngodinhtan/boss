@@ -5,15 +5,21 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLDSV
 {
-    public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frQLL : Form
     {
-        public Form1()
+        public frQLL()
         {
             InitializeComponent();
+        }
+
+        private void frQLL_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

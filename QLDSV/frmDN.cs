@@ -14,9 +14,12 @@ namespace QLDSV
     {
         public static string nhom = "";
         public static int cbK = 0;
+        DataTable table;
         public frmDN()
         {
             InitializeComponent();
+            ConnectSql.Connect(@"ACER-PC", "QLDSV", "sa", "12345");
+            table = ConnectSql.GetDataTable("select * from V_DS_PHANMANH");
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -31,8 +34,9 @@ namespace QLDSV
 
         private void frmDN_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLDSVDataSet.V_DS_PHANMANH' table. You can move, or remove it, as needed.
-            this.v_DS_PHANMANHTableAdapter.Fill(this.qLDSVDataSet.V_DS_PHANMANH);
+            cbbK.DataSource = table; // tao datasourece
+            cbbK.DisplayMember = table.Columns[0].ToString();// lay hang 1 cua bang khoa
+            cbbK.ValueMember = table.Columns[1].ToString();// gan gia tri server cho khoa
 
         }
 
@@ -43,79 +47,31 @@ namespace QLDSV
 
         private void btnDN_Click(object sender, EventArgs e)
         {
-            Program.mlogin = tbTK.Text;
-            Program.password = tbMK.Text;
-                
-            if (cbbK.SelectedIndex == 0)
+            if (String.IsNullOrWhiteSpace(tbTK.Text) || (String.IsNullOrWhiteSpace(tbMK.Text)))
             {
-                Program.servername = Program.servername1;
-               
+                MessageBox.Show("Moi ban nhap day du thong tin");
+                
             }
             else
             {
-                Program.servername = Program.servername2;
-                
+                String ServerName = cbbK.SelectedValue.ToString();
+                if (ConnectSql.Connect(@ServerName, "QLDSV", tbTK.Text, tbMK.Text) == true)
+                {
+                    DataTable tb = ConnectSql.GetDataTable(String.Format("exec  [dbo].[SP_DANGNHAP] '{0}'", tbTK.Text));// 
+                    ConnectSql.mlogin = tb.Rows[0][0].ToString();
+                    ConnectSql.mhoten = tb.Rows[0][1].ToString();
+                    ConnectSql.mgroup = tb.Rows[0][2].ToString();
+                    ConnectSql.khoa = table.Rows[cbbK.SelectedIndex][0].ToString();
+
+                    frmMain frmain = new frmMain();
+                    this.Hide();
+                    frmain.ShowDialog();
+                    this.Show();
+
+                }
             }
-            if (Program.mlogin == "" || Program.password=="")
-            {
-                MessageBox.Show("Ban chua nhap tai khoan hoac mat khau");
-            }
-            else
-            {
-
-                if (Program.KetNoi() == 0)
-                    return;
-                String strLenh = "SELECT name  from sys.sysusers  where sid = SUSER_SID('" + Program.mlogin + "')";
-                Program.myReader = Program.ExecSqlDataReader(strLenh, Program.connstr);
-                Program.myReader.Read();
-
-
-                if (Program.myReader == null)
-                    return;
-
-                Program.username = Program.myReader.GetString(0);     // Lay user name
-                if (Convert.IsDBNull(Program.username))
-                {
-                    MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username của cơ sở dữ liệu", "", MessageBoxButtons.OK);
-                    return;
-                }
-                Program.myReader.Close();
-
-                strLenh = "sp_helpuser '" + Program.username + "'";
-                // sp này trả về các fields theo thứ tự:
-                //Username Groupname    LoginName    DfDBName  UserID  SID
-
-                try
-                {
-                    Program.myReader = Program.ExecSqlDataReader(strLenh, Program.connstr);
-
-                }
-                catch (InvalidOperationException)
-                {
-                    MessageBox.Show("Mã sinh viên theo Login đăng nhập chưa có quyền truy cập.", "", MessageBoxButtons.OK);
-                    return;
-                }
-
-                // Lấy group name từ username
-                if (Program.myReader.Read())
-                    Program.mGroup = Program.myReader.GetString(1);
-                else
-                {
-                    MessageBox.Show("Lỗi xác định quyền của user. ", "", MessageBoxButtons.OK);
-                    return;
-                }
-
-                Program.myReader.Close();
-                nhom = Program.mGroup;
-
-
-                Form1 frMain = new Form1();
-                frMain.ShowDialog();
-            }
-
-
+        
         }
-
         private void btnT_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn Đã Chắc Chắn Muốn Thoát ?? ", "Thông Báo !!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
