@@ -105,7 +105,13 @@ namespace QLDSV
                 mALOPTextEdit.Focus();
                 return;
             }
-            updateSource();
+            Form frketqua = new frKetQua();
+            frketqua.StartPosition = FormStartPosition.CenterParent;
+            frketqua.ShowDialog();
+            if ( frketqua.DialogResult == DialogResult.OK)
+            {
+                updateSource();
+            }
         }
 
         private void trimEdit()

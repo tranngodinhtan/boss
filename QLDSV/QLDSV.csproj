@@ -56,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectSql.cs" />
+    <Compile Include="frKetQua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frKetQua.Designer.cs">
+      <DependentUpon>frKetQua.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSVDataSet1.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frKetQua.resx">
+      <DependentUpon>frKetQua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDN.resx">
       <DependentUpon>frmDN.cs</DependentUpon>
     </EmbeddedResource>
