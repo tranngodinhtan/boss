@@ -35,28 +35,32 @@
             // 
             // lbmsg
             // 
-            this.lbmsg.AutoSize = true;
+            this.lbmsg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbmsg.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbmsg.Location = new System.Drawing.Point(200, 47);
+            this.lbmsg.Location = new System.Drawing.Point(0, 0);
             this.lbmsg.Name = "lbmsg";
-            this.lbmsg.Size = new System.Drawing.Size(104, 19);
+            this.lbmsg.Size = new System.Drawing.Size(515, 262);
             this.lbmsg.TabIndex = 0;
             this.lbmsg.Text = "Are You Sure";
+            this.lbmsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOK
             // 
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(138, 106);
+            this.btnOK.Location = new System.Drawing.Point(94, 175);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 1;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(285, 106);
+            this.btnCancel.Location = new System.Drawing.Point(338, 175);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 1;
@@ -75,7 +79,6 @@
             this.Text = "frKetQua";
             this.Load += new System.EventHandler(this.frKetQua_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

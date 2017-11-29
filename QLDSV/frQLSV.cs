@@ -12,6 +12,7 @@ namespace QLDSV
 {
     public partial class frQLSV : Form
     {
+        int position = 0; // 
         public frQLSV()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace QLDSV
         private void frQLSV_Load(object sender, EventArgs e)
         {
             sINHVIENTableAdapter.Connection.ConnectionString = ConnectSql.connectionstring;
+            qLDSVDataSet1.EnforceConstraints = false;
             this.sINHVIENTableAdapter.Fill(this.qLDSVDataSet1.SINHVIEN);
            
 
@@ -35,7 +37,7 @@ namespace QLDSV
 
         private void sINHVIENGridControl_Click(object sender, EventArgs e)
         {
-
+            this.position = sINHVIENBindingSource.Position;
         }
 
         private void tENTextEdit_EditValueChanged(object sender, EventArgs e)
@@ -118,6 +120,48 @@ namespace QLDSV
         {
             mASVTextEdit.Text = mASVTextEdit.Text.Trim();
             mALOPTextEdit.Text = mALOPTextEdit.Text.Trim();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            Form frketqua = new frKetQua ("Ban có muốn xóa sinh viên có mã " + ((DataRowView)sINHVIENBindingSource[position])["MASV"].ToString().Trim() + "không?","Đồng ý ","Không");
+            frketqua.StartPosition = FormStartPosition.CenterParent;
+            frketqua.ShowDialog();
+            if (frketqua.DialogResult == DialogResult.OK)
+            {
+                sINHVIENBindingSource.RemoveAt(sINHVIENBindingSource.Position);
+                Console.WriteLine(((DataRowView)sINHVIENBindingSource[position])["MASV"].ToString().Trim());
+                updateSource();
+            }
+        }
+        
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            trimEdit();
+            enableEdit();
+        }
+
+        private void sINHVIENGridControl_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.position = sINHVIENBindingSource.Position;
+            Console.WriteLine(sINHVIENBindingSource.Position);
+
+        }
+
+        private void reload()
+        {
+            this.sINHVIENTableAdapter.Fill(this.qLDSVDataSet1.SINHVIEN);
+            pnView.Enabled = false;
+            pnEdit.Enabled = true;
+            btnLuu.Enabled = btnTaiLai.Enabled = btnXoa.Enabled = btnSua.Enabled = true;
+            btnPhucHoi.Enabled = false;
+        }
+
+        private void btnPhucHoi_Click(object sender, EventArgs e)
+        {
+            sINHVIENBindingSource.CancelEdit();
+            trimEdit();
         }
     }
 }
