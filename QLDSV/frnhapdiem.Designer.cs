@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label tENLOPLabel;
             System.Windows.Forms.Label lANLabel;
+            System.Windows.Forms.Label hOCKYLabel;
+            System.Windows.Forms.Label tENLOPLabel;
             this.qLDSVDataSet1 = new QLDSV.QLDSVDataSet1();
             this.lOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOPTableAdapter = new QLDSV.QLDSVDataSet1TableAdapters.LOPTableAdapter();
@@ -40,21 +41,30 @@
             this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dIEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lANSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbHK = new System.Windows.Forms.Label();
             this.btnbatdau = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.vMonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLDSVDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.v_MonHocTableAdapter = new QLDSV.QLDSVDataSet1TableAdapters.V_MonHocTableAdapter();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.vLOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.v_LOPTableAdapter = new QLDSV.QLDSVDataSet1TableAdapters.V_LOPTableAdapter();
-            this.lOPGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            tENLOPLabel = new System.Windows.Forms.Label();
+            this.hOCKYSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.cbbmh = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbblop = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.vDSPHANMANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLDSVDataSet = new QLDSV.QLDSVDataSet();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.diemGridView = new System.Windows.Forms.DataGridView();
+            this.btnluu = new System.Windows.Forms.Button();
+            this.btnhuy = new System.Windows.Forms.Button();
+            this.v_DS_PHANMANHTableAdapter = new QLDSV.QLDSVDataSetTableAdapters.V_DS_PHANMANHTableAdapter();
+            this.cbbK = new System.Windows.Forms.ComboBox();
+            this.vDSPHANMANHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             lANLabel = new System.Windows.Forms.Label();
+            hOCKYLabel = new System.Windows.Forms.Label();
+            tENLOPLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
@@ -63,27 +73,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.vMonHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vLOPBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOCKYSpinEdit.Properties)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.diemGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tENLOPLabel
-            // 
-            tENLOPLabel.AutoSize = true;
-            tENLOPLabel.Location = new System.Drawing.Point(246, 20);
-            tENLOPLabel.Name = "tENLOPLabel";
-            tENLOPLabel.Size = new System.Drawing.Size(53, 13);
-            tENLOPLabel.TabIndex = 2;
-            tENLOPLabel.Text = "TENLOP:";
             // 
             // lANLabel
             // 
             lANLabel.AutoSize = true;
-            lANLabel.Location = new System.Drawing.Point(246, 75);
+            lANLabel.Location = new System.Drawing.Point(696, 36);
             lANLabel.Name = "lANLabel";
             lANLabel.Size = new System.Drawing.Size(31, 13);
             lANLabel.TabIndex = 6;
             lANLabel.Text = "LAN:";
+            // 
+            // hOCKYLabel
+            // 
+            hOCKYLabel.AutoSize = true;
+            hOCKYLabel.Location = new System.Drawing.Point(472, 36);
+            hOCKYLabel.Name = "hOCKYLabel";
+            hOCKYLabel.Size = new System.Drawing.Size(47, 13);
+            hOCKYLabel.TabIndex = 13;
+            hOCKYLabel.Text = "HOCKY:";
+            // 
+            // tENLOPLabel
+            // 
+            tENLOPLabel.AutoSize = true;
+            tENLOPLabel.Location = new System.Drawing.Point(229, 32);
+            tENLOPLabel.Name = "tENLOPLabel";
+            tENLOPLabel.Size = new System.Drawing.Size(53, 13);
+            tENLOPLabel.TabIndex = 2;
+            tENLOPLabel.Text = "TENLOP:";
             // 
             // qLDSVDataSet1
             // 
@@ -136,51 +160,23 @@
             0,
             0,
             0});
-            this.lANSpinEdit.Location = new System.Drawing.Point(305, 72);
+            this.lANSpinEdit.Location = new System.Drawing.Point(755, 33);
             this.lANSpinEdit.Name = "lANSpinEdit";
             this.lANSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lANSpinEdit.Size = new System.Drawing.Size(100, 20);
+            this.lANSpinEdit.Size = new System.Drawing.Size(121, 20);
             this.lANSpinEdit.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(80, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 8;
-            // 
-            // lbHK
-            // 
-            this.lbHK.AutoSize = true;
-            this.lbHK.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHK.Location = new System.Drawing.Point(19, 84);
-            this.lbHK.Name = "lbHK";
-            this.lbHK.Size = new System.Drawing.Size(55, 17);
-            this.lbHK.TabIndex = 9;
-            this.lbHK.Text = "Học Kỳ";
             // 
             // btnbatdau
             // 
             this.btnbatdau.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbatdau.Location = new System.Drawing.Point(249, 133);
+            this.btnbatdau.Location = new System.Drawing.Point(406, 80);
             this.btnbatdau.Name = "btnbatdau";
             this.btnbatdau.Size = new System.Drawing.Size(75, 23);
             this.btnbatdau.TabIndex = 10;
             this.btnbatdau.Text = "Bắt Đầu";
             this.btnbatdau.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.vMonHocBindingSource;
-            this.comboBox1.DisplayMember = "TENMH";
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(80, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.ValueMember = "MAMH";
+            this.btnbatdau.Click += new System.EventHandler(this.btnbatdau_Click);
             // 
             // vMonHocBindingSource
             // 
@@ -192,30 +188,9 @@
             this.qLDSVDataSet1BindingSource.DataSource = this.qLDSVDataSet1;
             this.qLDSVDataSet1BindingSource.Position = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Tên MH";
-            // 
             // v_MonHocTableAdapter
             // 
             this.v_MonHocTableAdapter.ClearBeforeFill = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataSource = this.vLOPBindingSource;
-            this.comboBox2.DisplayMember = "TENLOP";
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(305, 11);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 13;
-            this.comboBox2.ValueMember = "MALOP";
             // 
             // vLOPBindingSource
             // 
@@ -226,37 +201,156 @@
             // 
             this.v_LOPTableAdapter.ClearBeforeFill = true;
             // 
-            // lOPGridControl
+            // hOCKYSpinEdit
             // 
-            this.lOPGridControl.DataSource = this.lOPBindingSource;
-            this.lOPGridControl.Location = new System.Drawing.Point(509, 20);
-            this.lOPGridControl.MainView = this.gridView1;
-            this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(300, 220);
-            this.lOPGridControl.TabIndex = 13;
-            this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.hOCKYSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.dIEMBindingSource, "HOCKY", true));
+            this.hOCKYSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.hOCKYSpinEdit.Location = new System.Drawing.Point(530, 33);
+            this.hOCKYSpinEdit.Name = "hOCKYSpinEdit";
+            this.hOCKYSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.hOCKYSpinEdit.Size = new System.Drawing.Size(121, 20);
+            this.hOCKYSpinEdit.TabIndex = 14;
             // 
-            // gridView1
+            // cbbmh
             // 
-            this.gridView1.GridControl = this.lOPGridControl;
-            this.gridView1.Name = "gridView1";
+            this.cbbmh.DataSource = this.vMonHocBindingSource;
+            this.cbbmh.DisplayMember = "TENMH";
+            this.cbbmh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbmh.FormattingEnabled = true;
+            this.cbbmh.Location = new System.Drawing.Point(63, 32);
+            this.cbbmh.Name = "cbbmh";
+            this.cbbmh.Size = new System.Drawing.Size(121, 21);
+            this.cbbmh.TabIndex = 11;
+            this.cbbmh.ValueMember = "MAMH";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Tên MH";
+            // 
+            // cbblop
+            // 
+            this.cbblop.DataSource = this.vLOPBindingSource;
+            this.cbblop.DisplayMember = "TENLOP";
+            this.cbblop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbblop.FormattingEnabled = true;
+            this.cbblop.Location = new System.Drawing.Point(288, 32);
+            this.cbblop.Name = "cbblop";
+            this.cbblop.Size = new System.Drawing.Size(121, 21);
+            this.cbblop.TabIndex = 13;
+            this.cbblop.ValueMember = "MALOP";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cbbK);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.cbblop);
+            this.panel1.Controls.Add(hOCKYLabel);
+            this.panel1.Controls.Add(tENLOPLabel);
+            this.panel1.Controls.Add(this.hOCKYSpinEdit);
+            this.panel1.Controls.Add(this.lANSpinEdit);
+            this.panel1.Controls.Add(lANLabel);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnbatdau);
+            this.panel1.Controls.Add(this.cbbmh);
+            this.panel1.Location = new System.Drawing.Point(34, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(899, 151);
+            this.panel1.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 114);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Khoa";
+            // 
+            // vDSPHANMANHBindingSource
+            // 
+            this.vDSPHANMANHBindingSource.DataMember = "V_DS_PHANMANH";
+            this.vDSPHANMANHBindingSource.DataSource = this.qLDSVDataSet;
+            // 
+            // qLDSVDataSet
+            // 
+            this.qLDSVDataSet.DataSetName = "QLDSVDataSet";
+            this.qLDSVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.diemGridView);
+            this.panel2.Location = new System.Drawing.Point(42, 206);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(891, 393);
+            this.panel2.TabIndex = 16;
+            // 
+            // diemGridView
+            // 
+            this.diemGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.diemGridView.Location = new System.Drawing.Point(33, 17);
+            this.diemGridView.Name = "diemGridView";
+            this.diemGridView.Size = new System.Drawing.Size(835, 341);
+            this.diemGridView.TabIndex = 0;
+            // 
+            // btnluu
+            // 
+            this.btnluu.Location = new System.Drawing.Point(289, 617);
+            this.btnluu.Name = "btnluu";
+            this.btnluu.Size = new System.Drawing.Size(75, 23);
+            this.btnluu.TabIndex = 17;
+            this.btnluu.Text = "Lưu";
+            this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
+            // 
+            // btnhuy
+            // 
+            this.btnhuy.Location = new System.Drawing.Point(733, 617);
+            this.btnhuy.Name = "btnhuy";
+            this.btnhuy.Size = new System.Drawing.Size(75, 23);
+            this.btnhuy.TabIndex = 17;
+            this.btnhuy.Text = "Hủy";
+            this.btnhuy.UseVisualStyleBackColor = true;
+            // 
+            // v_DS_PHANMANHTableAdapter
+            // 
+            this.v_DS_PHANMANHTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbbK
+            // 
+            this.cbbK.DataSource = this.vDSPHANMANHBindingSource1;
+            this.cbbK.DisplayMember = "TENKHOA";
+            this.cbbK.FormattingEnabled = true;
+            this.cbbK.Location = new System.Drawing.Point(63, 114);
+            this.cbbK.Name = "cbbK";
+            this.cbbK.Size = new System.Drawing.Size(121, 21);
+            this.cbbK.TabIndex = 17;
+            this.cbbK.ValueMember = "TENSERVER";
+            this.cbbK.SelectedIndexChanged += new System.EventHandler(this.cbbK_SelectedIndexChanged_1);
+            // 
+            // vDSPHANMANHBindingSource1
+            // 
+            this.vDSPHANMANHBindingSource1.DataMember = "V_DS_PHANMANH";
+            this.vDSPHANMANHBindingSource1.DataSource = this.qLDSVDataSet;
             // 
             // frnhapdiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 273);
-            this.Controls.Add(this.lOPGridControl);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btnbatdau);
-            this.Controls.Add(this.lbHK);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(lANLabel);
-            this.Controls.Add(this.lANSpinEdit);
-            this.Controls.Add(tENLOPLabel);
+            this.ClientSize = new System.Drawing.Size(1093, 676);
+            this.Controls.Add(this.btnhuy);
+            this.Controls.Add(this.btnluu);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "frnhapdiem";
             this.Text = "frnhapdiem";
             this.Load += new System.EventHandler(this.frnhapdiem_Load);
@@ -268,10 +362,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.vMonHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vLOPBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOCKYSpinEdit.Properties)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.diemGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -286,18 +385,26 @@
         private QLDSVDataSet1TableAdapters.DIEMTableAdapter dIEMTableAdapter;
         private System.Windows.Forms.BindingSource dIEMBindingSource;
         private DevExpress.XtraEditors.SpinEdit lANSpinEdit;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lbHK;
         private System.Windows.Forms.Button btnbatdau;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource qLDSVDataSet1BindingSource;
         private System.Windows.Forms.BindingSource vMonHocBindingSource;
         private QLDSVDataSet1TableAdapters.V_MonHocTableAdapter v_MonHocTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.BindingSource vLOPBindingSource;
         private QLDSVDataSet1TableAdapters.V_LOPTableAdapter v_LOPTableAdapter;
-        private DevExpress.XtraGrid.GridControl lOPGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SpinEdit hOCKYSpinEdit;
+        private System.Windows.Forms.ComboBox cbbmh;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbblop;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView diemGridView;
+        private System.Windows.Forms.Button btnluu;
+        private System.Windows.Forms.Button btnhuy;
+        private System.Windows.Forms.Label label2;
+        private QLDSVDataSet qLDSVDataSet;
+        private System.Windows.Forms.BindingSource vDSPHANMANHBindingSource;
+        private QLDSVDataSetTableAdapters.V_DS_PHANMANHTableAdapter v_DS_PHANMANHTableAdapter;
+        private System.Windows.Forms.ComboBox cbbK;
+        private System.Windows.Forms.BindingSource vDSPHANMANHBindingSource1;
     }
 }

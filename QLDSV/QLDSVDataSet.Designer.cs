@@ -783,7 +783,7 @@ namespace QLDSV.QLDSVDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TENKHOA, TENSERVER FROM V_DS_PHANMANH";
+            this._commandCollection[0].CommandText = "SELECT TENKHOA,TENSERVER FROM dbo.V_DS_PHANMANH";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -57,6 +57,7 @@ namespace QLDSV
             else
             {
                 String ServerName = cbbK.SelectedValue.ToString();
+                ConnectSql.servername = ServerName;
                 if (ConnectSql.Connect(@ServerName, "QLDSV", tbTK.Text, tbMK.Text) == true)
                 {
                     ConnectSql.tk = tbTK.Text;

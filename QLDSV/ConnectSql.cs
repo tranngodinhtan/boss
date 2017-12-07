@@ -13,6 +13,7 @@ namespace QLDSV
     {
         public static string tk; // tai khoan
         public static string mk; // mat khau
+        public static string servername;
         public static int selectkhoa;
         public static SqlConnection connect = null;
         public static SqlDataAdapter adapter = null;
