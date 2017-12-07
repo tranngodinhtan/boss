@@ -28,10 +28,26 @@ namespace QLDSV
 
         private void frQLSV_Load(object sender, EventArgs e)
         {
+            pnEdit.Enabled = false;
+
+            // TODO: This line of code loads data into the 'qLDSVDataSet1.V_LOP' table. You can move, or remove it, as needed.
+            this.v_LOPTableAdapter.Fill(this.qLDSVDataSet1.V_LOP);
+            if (ConnectSql.mgroup != "PGV")
+            {
+
+                pnkhoa.Enabled = false;
+
+            }
+            else
+            {
+                this.v_DS_PHANMANHTableAdapter.Fill(this.qLDSVDataSet.V_DS_PHANMANH);
+
+                cbbKhoa.SelectedIndex = ConnectSql.selectkhoa;
+
+            }
             sINHVIENTableAdapter.Connection.ConnectionString = ConnectSql.connectionstring;
             qLDSVDataSet1.EnforceConstraints = false;
             this.sINHVIENTableAdapter.Fill(this.qLDSVDataSet1.SINHVIEN);
-           
 
         }
 
@@ -52,6 +68,7 @@ namespace QLDSV
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+
             sINHVIENBindingSource.AddNew();
             enableEdit();
 
@@ -60,7 +77,7 @@ namespace QLDSV
         {
             pnEdit.Enabled = true;
             pnView.Enabled = false;
-            btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnTaiLai.Enabled = false;
+            btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnhuy.Enabled = false;
             btnLuu.Enabled = true;
             btnPhucHoi.Enabled = true;
                  
@@ -71,7 +88,7 @@ namespace QLDSV
             this.sINHVIENTableAdapter.Fill(this.qLDSVDataSet1.SINHVIEN); // lấy lại dữ liệu từ sinh viên để up lại
             pnEdit.Enabled = false;
             pnView.Enabled = true;
-            btnThem.Enabled = btnSua.Enabled = btnTaiLai.Enabled = btnXoa.Enabled = true;
+            btnThem.Enabled = btnSua.Enabled = btnhuy.Enabled = btnXoa.Enabled = true;
             btnPhucHoi.Enabled = true;
         }
 
@@ -101,12 +118,13 @@ namespace QLDSV
                 mASVTextEdit.Focus();
                 return;
             }
-            if (mALOPTextEdit.Text.Trim()=="")
+            if (mALOPTextEdit.Text.Trim() == "")// ko thể chuyển đổi từ dev.textedit sang string nên dùng cách này 
             {
-                MessageBox.Show("Bạn chưa điền mã lớp!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Bạn chưa điền mã sinh viên!", "", MessageBoxButtons.OK);
                 mALOPTextEdit.Focus();
                 return;
             }
+
             Form frketqua = new frKetQua();
             frketqua.StartPosition = FormStartPosition.CenterParent;
             frketqua.ShowDialog();
@@ -129,7 +147,7 @@ namespace QLDSV
             frketqua.ShowDialog();
             if (frketqua.DialogResult == DialogResult.OK)
             {
-                sINHVIENBindingSource.RemoveAt(sINHVIENBindingSource.Position);
+                sINHVIENBindingSource.RemoveCurrent();
                 Console.WriteLine(((DataRowView)sINHVIENBindingSource[position])["MASV"].ToString().Trim());
                 updateSource();
             }
@@ -154,7 +172,7 @@ namespace QLDSV
             this.sINHVIENTableAdapter.Fill(this.qLDSVDataSet1.SINHVIEN);
             pnView.Enabled = false;
             pnEdit.Enabled = true;
-            btnLuu.Enabled = btnTaiLai.Enabled = btnXoa.Enabled = btnSua.Enabled = true;
+            btnLuu.Enabled = btnhuy.Enabled = btnXoa.Enabled = btnSua.Enabled = btnThem.Enabled= true;
             btnPhucHoi.Enabled = false;
         }
 
@@ -162,6 +180,28 @@ namespace QLDSV
         {
             sINHVIENBindingSource.CancelEdit();
             trimEdit();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ConnectSql.Connect(cbbKhoa.SelectedValue.ToString(), "QLDSV", ConnectSql.tk, ConnectSql.mk);
+            sINHVIENTableAdapter.Connection.ConnectionString = ConnectSql.connectionstring;
+            this.sINHVIENTableAdapter.Fill(this.qLDSVDataSet1.SINHVIEN);
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnhuy_Click(object sender, EventArgs e)
+        {
+            reLoad();
         }
     }
 }

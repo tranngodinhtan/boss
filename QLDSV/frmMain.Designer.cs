@@ -40,7 +40,6 @@
             this.btnQLDSV = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnQLMH = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -63,8 +62,7 @@
             this.rbQLL,
             this.rbQLSV,
             this.ribbonPageGroup4,
-            this.ribbonPageGroup5,
-            this.ribbonPageGroup1});
+            this.ribbonPageGroup5});
             this.pgTC.Name = "pgTC";
             this.pgTC.Text = "Trang Chủ";
             // 
@@ -136,11 +134,7 @@
             this.btnQLMH.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQLMH.ImageOptions.Image")));
             this.btnQLMH.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQLMH.ImageOptions.LargeImage")));
             this.btnQLMH.Name = "btnQLMH";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.btnQLMH.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLMH_ItemClick);
             // 
             // barButtonGroup1
             // 
@@ -250,6 +244,7 @@
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "frmMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.ResumeLayout(false);
@@ -281,7 +276,6 @@
         private DevExpress.XtraBars.BarStaticItem hoten;
         private DevExpress.XtraBars.BarStaticItem nhom;
         private DevExpress.XtraBars.BarStaticItem khoa;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup2;
     }
 }

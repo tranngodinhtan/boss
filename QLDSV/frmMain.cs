@@ -77,7 +77,12 @@ namespace QLDSV
 
         private void btnQLDSV_ItemClick(object sender, ItemClickEventArgs e)
         {
+            ShowMdiChildren(typeof(frnhapdiem));
+        }
 
+        private void btnQLMH_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowMdiChildren(typeof(frmonhoc));
         }
     }
 }

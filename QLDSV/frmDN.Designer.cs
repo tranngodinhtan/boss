@@ -144,6 +144,7 @@
             this.cbbK.Name = "cbbK";
             this.cbbK.Size = new System.Drawing.Size(251, 21);
             this.cbbK.TabIndex = 8;
+            this.cbbK.SelectedIndexChanged += new System.EventHandler(this.cbbK_SelectedIndexChanged_1);
             // 
             // frmDN
             // 

@@ -74,6 +74,18 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmonhoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmonhoc.Designer.cs">
+      <DependentUpon>frmonhoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frnhapdiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frnhapdiem.Designer.cs">
+      <DependentUpon>frnhapdiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frQLL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmonhoc.resx">
+      <DependentUpon>frmonhoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frnhapdiem.resx">
+      <DependentUpon>frnhapdiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frQLL.resx">
       <DependentUpon>frQLL.cs</DependentUpon>

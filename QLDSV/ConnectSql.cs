@@ -11,6 +11,9 @@ namespace QLDSV
 {
     public static class ConnectSql
     {
+        public static string tk; // tai khoan
+        public static string mk; // mat khau
+        public static int selectkhoa;
         public static SqlConnection connect = null;
         public static SqlDataAdapter adapter = null;
         public static SqlCommand command = new SqlCommand();
