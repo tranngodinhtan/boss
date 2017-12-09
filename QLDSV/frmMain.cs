@@ -84,5 +84,10 @@ namespace QLDSV
         {
             ShowMdiChildren(typeof(frmonhoc));
         }
+
+        private void btIn_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ShowMdiChildren(typeof(frmIn));
+        }
     }
 }

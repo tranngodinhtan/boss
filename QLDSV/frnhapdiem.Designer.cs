@@ -52,16 +52,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbblop = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbK = new System.Windows.Forms.ComboBox();
+            this.vDSPHANMANHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.qLDSVDataSet = new QLDSV.QLDSVDataSet();
             this.label2 = new System.Windows.Forms.Label();
             this.vDSPHANMANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLDSVDataSet = new QLDSV.QLDSVDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.diemGridView = new System.Windows.Forms.DataGridView();
             this.btnluu = new System.Windows.Forms.Button();
             this.btnhuy = new System.Windows.Forms.Button();
             this.v_DS_PHANMANHTableAdapter = new QLDSV.QLDSVDataSetTableAdapters.V_DS_PHANMANHTableAdapter();
-            this.cbbK = new System.Windows.Forms.ComboBox();
-            this.vDSPHANMANHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             lANLabel = new System.Windows.Forms.Label();
             hOCKYLabel = new System.Windows.Forms.Label();
             tENLOPLabel = new System.Windows.Forms.Label();
@@ -75,11 +75,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.vLOPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOCKYSpinEdit.Properties)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.diemGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lANLabel
@@ -166,6 +166,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lANSpinEdit.Size = new System.Drawing.Size(121, 20);
             this.lANSpinEdit.TabIndex = 7;
+            this.lANSpinEdit.EditValueChanged += new System.EventHandler(this.lANSpinEdit_EditValueChanged);
             // 
             // btnbatdau
             // 
@@ -248,6 +249,7 @@
             this.cbblop.Size = new System.Drawing.Size(121, 21);
             this.cbblop.TabIndex = 13;
             this.cbblop.ValueMember = "MALOP";
+            this.cbblop.SelectedIndexChanged += new System.EventHandler(this.cbblop_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -266,6 +268,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(899, 151);
             this.panel1.TabIndex = 15;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // cbbK
+            // 
+            this.cbbK.DataSource = this.vDSPHANMANHBindingSource1;
+            this.cbbK.DisplayMember = "TENKHOA";
+            this.cbbK.FormattingEnabled = true;
+            this.cbbK.Location = new System.Drawing.Point(63, 114);
+            this.cbbK.Name = "cbbK";
+            this.cbbK.Size = new System.Drawing.Size(121, 21);
+            this.cbbK.TabIndex = 17;
+            this.cbbK.ValueMember = "TENSERVER";
+            this.cbbK.SelectedIndexChanged += new System.EventHandler(this.cbbK_SelectedIndexChanged_1);
+            // 
+            // vDSPHANMANHBindingSource1
+            // 
+            this.vDSPHANMANHBindingSource1.DataMember = "V_DS_PHANMANH";
+            this.vDSPHANMANHBindingSource1.DataSource = this.qLDSVDataSet;
+            // 
+            // qLDSVDataSet
+            // 
+            this.qLDSVDataSet.DataSetName = "QLDSVDataSet";
+            this.qLDSVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -280,11 +305,6 @@
             // 
             this.vDSPHANMANHBindingSource.DataMember = "V_DS_PHANMANH";
             this.vDSPHANMANHBindingSource.DataSource = this.qLDSVDataSet;
-            // 
-            // qLDSVDataSet
-            // 
-            this.qLDSVDataSet.DataSetName = "QLDSVDataSet";
-            this.qLDSVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel2
             // 
@@ -325,23 +345,6 @@
             // 
             this.v_DS_PHANMANHTableAdapter.ClearBeforeFill = true;
             // 
-            // cbbK
-            // 
-            this.cbbK.DataSource = this.vDSPHANMANHBindingSource1;
-            this.cbbK.DisplayMember = "TENKHOA";
-            this.cbbK.FormattingEnabled = true;
-            this.cbbK.Location = new System.Drawing.Point(63, 114);
-            this.cbbK.Name = "cbbK";
-            this.cbbK.Size = new System.Drawing.Size(121, 21);
-            this.cbbK.TabIndex = 17;
-            this.cbbK.ValueMember = "TENSERVER";
-            this.cbbK.SelectedIndexChanged += new System.EventHandler(this.cbbK_SelectedIndexChanged_1);
-            // 
-            // vDSPHANMANHBindingSource1
-            // 
-            this.vDSPHANMANHBindingSource1.DataMember = "V_DS_PHANMANH";
-            this.vDSPHANMANHBindingSource1.DataSource = this.qLDSVDataSet;
-            // 
             // frnhapdiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,11 +368,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.hOCKYSpinEdit.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.diemGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

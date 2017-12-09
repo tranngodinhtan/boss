@@ -184,7 +184,7 @@ namespace QLDSV
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ConnectSql.Connect(cbbKhoa.SelectedValue.ToString(), "QLDSV", ConnectSql.tk, ConnectSql.mk);
+            ConnectSql.Connect(cbbKhoa.SelectedValue.ToString(), "QLDSV", "spconnect", "12345");
             sINHVIENTableAdapter.Connection.ConnectionString = ConnectSql.connectionstring;
             this.sINHVIENTableAdapter.Fill(this.qLDSVDataSet1.SINHVIEN);
         }

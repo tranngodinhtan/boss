@@ -149,7 +149,7 @@ namespace QLDSV
 
         private void cbbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ConnectSql.Connect(cbbKhoa.SelectedValue.ToString(), "QLDSV", ConnectSql.tk, ConnectSql.mk);
+            ConnectSql.Connect(cbbKhoa.SelectedValue.ToString(), "QLDSV", "spconnect", "12345");
             lOPTableAdapter.Connection.ConnectionString = ConnectSql.connectionstring;
             this.lOPTableAdapter.Fill(this.qLDSVDataSet1.LOP);
 

@@ -28,79 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbTTK = new System.Windows.Forms.TextBox();
-            this.tbHT = new System.Windows.Forms.TextBox();
-            this.tbN = new System.Windows.Forms.TextBox();
-            this.tbK = new System.Windows.Forms.TextBox();
-            this.lbTK = new System.Windows.Forms.Label();
-            this.lbHT = new System.Windows.Forms.Label();
-            this.lbN = new System.Windows.Forms.Label();
+            this.tbTDN = new System.Windows.Forms.TextBox();
+            this.tbmk = new System.Windows.Forms.TextBox();
+            this.tbnhaplai = new System.Windows.Forms.TextBox();
+            this.lblg = new System.Windows.Forms.Label();
+            this.lbmk = new System.Windows.Forms.Label();
+            this.lbnhaplai = new System.Windows.Forms.Label();
             this.lbK = new System.Windows.Forms.Label();
             this.btnTTK = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
             this.btnDMK = new System.Windows.Forms.Button();
+            this.cbbK = new System.Windows.Forms.ComboBox();
+            this.btnT = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // tbTTK
+            // tbTDN
             // 
-            this.tbTTK.Location = new System.Drawing.Point(206, 33);
-            this.tbTTK.Name = "tbTTK";
-            this.tbTTK.Size = new System.Drawing.Size(100, 20);
-            this.tbTTK.TabIndex = 0;
+            this.tbTDN.Location = new System.Drawing.Point(206, 33);
+            this.tbTDN.Name = "tbTDN";
+            this.tbTDN.Size = new System.Drawing.Size(121, 20);
+            this.tbTDN.TabIndex = 0;
+            this.tbTDN.TextChanged += new System.EventHandler(this.tbTTK_TextChanged);
             // 
-            // tbHT
+            // tbmk
             // 
-            this.tbHT.Location = new System.Drawing.Point(206, 71);
-            this.tbHT.Name = "tbHT";
-            this.tbHT.Size = new System.Drawing.Size(100, 20);
-            this.tbHT.TabIndex = 0;
+            this.tbmk.Location = new System.Drawing.Point(206, 71);
+            this.tbmk.Name = "tbmk";
+            this.tbmk.Size = new System.Drawing.Size(121, 20);
+            this.tbmk.TabIndex = 0;
             // 
-            // tbN
+            // tbnhaplai
             // 
-            this.tbN.Location = new System.Drawing.Point(206, 106);
-            this.tbN.Name = "tbN";
-            this.tbN.Size = new System.Drawing.Size(100, 20);
-            this.tbN.TabIndex = 0;
+            this.tbnhaplai.Location = new System.Drawing.Point(206, 106);
+            this.tbnhaplai.Name = "tbnhaplai";
+            this.tbnhaplai.Size = new System.Drawing.Size(121, 20);
+            this.tbnhaplai.TabIndex = 0;
             // 
-            // tbK
+            // lblg
             // 
-            this.tbK.Location = new System.Drawing.Point(206, 145);
-            this.tbK.Name = "tbK";
-            this.tbK.Size = new System.Drawing.Size(100, 20);
-            this.tbK.TabIndex = 0;
+            this.lblg.AutoSize = true;
+            this.lblg.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblg.Location = new System.Drawing.Point(12, 33);
+            this.lblg.Name = "lblg";
+            this.lblg.Size = new System.Drawing.Size(112, 18);
+            this.lblg.TabIndex = 1;
+            this.lblg.Text = "Tên Đăng Nhập";
+            this.lblg.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lbTK
+            // lbmk
             // 
-            this.lbTK.AutoSize = true;
-            this.lbTK.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTK.Location = new System.Drawing.Point(12, 33);
-            this.lbTK.Name = "lbTK";
-            this.lbTK.Size = new System.Drawing.Size(105, 18);
-            this.lbTK.TabIndex = 1;
-            this.lbTK.Text = "Tên Tài Khoản";
-            this.lbTK.Click += new System.EventHandler(this.label1_Click);
+            this.lbmk.AutoSize = true;
+            this.lbmk.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbmk.Location = new System.Drawing.Point(12, 71);
+            this.lbmk.Name = "lbmk";
+            this.lbmk.Size = new System.Drawing.Size(71, 18);
+            this.lbmk.TabIndex = 1;
+            this.lbmk.Text = "Mật Khẩu";
+            this.lbmk.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lbHT
+            // lbnhaplai
             // 
-            this.lbHT.AutoSize = true;
-            this.lbHT.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHT.Location = new System.Drawing.Point(12, 71);
-            this.lbHT.Name = "lbHT";
-            this.lbHT.Size = new System.Drawing.Size(57, 18);
-            this.lbHT.TabIndex = 1;
-            this.lbHT.Text = "Họ Tên";
-            this.lbHT.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lbN
-            // 
-            this.lbN.AutoSize = true;
-            this.lbN.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbN.Location = new System.Drawing.Point(12, 106);
-            this.lbN.Name = "lbN";
-            this.lbN.Size = new System.Drawing.Size(47, 18);
-            this.lbN.TabIndex = 1;
-            this.lbN.Text = "Nhóm";
-            this.lbN.Click += new System.EventHandler(this.label1_Click);
+            this.lbnhaplai.AutoSize = true;
+            this.lbnhaplai.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnhaplai.Location = new System.Drawing.Point(12, 106);
+            this.lbnhaplai.Name = "lbnhaplai";
+            this.lbnhaplai.Size = new System.Drawing.Size(132, 18);
+            this.lbnhaplai.TabIndex = 1;
+            this.lbnhaplai.Text = "Nhập Lại Mật Khẩu";
+            this.lbnhaplai.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbK
             // 
@@ -141,22 +136,45 @@
             this.btnDMK.Text = "Đổi Mật Khẩu";
             this.btnDMK.UseVisualStyleBackColor = true;
             // 
+            // cbbK
+            // 
+            this.cbbK.FormattingEnabled = true;
+            this.cbbK.Items.AddRange(new object[] {
+            "PGV",
+            "KHOA",
+            "USER"});
+            this.cbbK.Location = new System.Drawing.Point(206, 141);
+            this.cbbK.Name = "cbbK";
+            this.cbbK.Size = new System.Drawing.Size(121, 21);
+            this.cbbK.TabIndex = 5;
+            // 
+            // btnT
+            // 
+            this.btnT.Location = new System.Drawing.Point(516, 141);
+            this.btnT.Name = "btnT";
+            this.btnT.Size = new System.Drawing.Size(124, 23);
+            this.btnT.TabIndex = 6;
+            this.btnT.Text = "Thoát";
+            this.btnT.UseVisualStyleBackColor = true;
+            this.btnT.Click += new System.EventHandler(this.btnT_Click);
+            // 
             // frQLTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 538);
+            this.Controls.Add(this.btnT);
+            this.Controls.Add(this.cbbK);
             this.Controls.Add(this.btnDMK);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnTTK);
             this.Controls.Add(this.lbK);
-            this.Controls.Add(this.lbN);
-            this.Controls.Add(this.lbHT);
-            this.Controls.Add(this.lbTK);
-            this.Controls.Add(this.tbK);
-            this.Controls.Add(this.tbN);
-            this.Controls.Add(this.tbHT);
-            this.Controls.Add(this.tbTTK);
+            this.Controls.Add(this.lbnhaplai);
+            this.Controls.Add(this.lbmk);
+            this.Controls.Add(this.lblg);
+            this.Controls.Add(this.tbnhaplai);
+            this.Controls.Add(this.tbmk);
+            this.Controls.Add(this.tbTDN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frQLTK";
             this.Text = "frQLTK";
@@ -169,16 +187,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tbTTK;
-        private System.Windows.Forms.TextBox tbHT;
-        private System.Windows.Forms.TextBox tbN;
-        private System.Windows.Forms.TextBox tbK;
-        private System.Windows.Forms.Label lbTK;
-        private System.Windows.Forms.Label lbHT;
-        private System.Windows.Forms.Label lbN;
+        private System.Windows.Forms.TextBox tbTDN;
+        private System.Windows.Forms.TextBox tbmk;
+        private System.Windows.Forms.TextBox tbnhaplai;
+        private System.Windows.Forms.Label lblg;
+        private System.Windows.Forms.Label lbmk;
+        private System.Windows.Forms.Label lbnhaplai;
         private System.Windows.Forms.Label lbK;
         private System.Windows.Forms.Button btnTTK;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Button btnDMK;
+        private System.Windows.Forms.ComboBox cbbK;
+        private System.Windows.Forms.Button btnT;
     }
 }

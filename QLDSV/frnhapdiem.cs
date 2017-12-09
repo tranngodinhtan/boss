@@ -122,11 +122,26 @@ namespace QLDSV
 
         private void cbbK_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            ConnectSql.Connect(cbbK.SelectedValue.ToString(), "QLDSV", ConnectSql.tk, ConnectSql.mk);
+            ConnectSql.Connect(cbbK.SelectedValue.ToString(), "QLDSV", "spconnect", "12345");
             lOPTableAdapter.Connection.ConnectionString = ConnectSql.connectionstring;
             v_LOPTableAdapter.Connection.ConnectionString = v_MonHocTableAdapter.Connection.ConnectionString = ConnectSql.connectionstring;
             this.v_LOPTableAdapter.Fill(this.qLDSVDataSet1.V_LOP);
             this.v_MonHocTableAdapter.Fill(this.qLDSVDataSet1.V_MonHoc);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbblop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lANSpinEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
    
